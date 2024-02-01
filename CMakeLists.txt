@@ -23,7 +23,7 @@ list( APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake )
 include( ProcessDependencies )
 
 # Name your module here.
-set( SHORT_NAME my )
+set( SHORT_NAME astrocyte_surrogate_ )
 
 # Build the complete module name:
 set( MODULE_NAME ${SHORT_NAME}module )

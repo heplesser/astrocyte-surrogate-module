@@ -19,23 +19,9 @@
 
 # Add all your sources here and specify dependencies, e.g., link libraries
 set( MODULE_SOURCES
-     mymodule.h mymodule.cpp
-     pif_psc_alpha.h pif_psc_alpha.cpp
-     drop_odd_spike_connection.h drop_odd_spike_connection.cpp
-     step_pattern_builder.h step_pattern_builder.cpp
-     recording_backend_socket.h recording_backend_socket.cpp
+     astrocyte_surrogate_module.h astrocyte_surrogate_module.cpp
+     astrocyte_surrogate.h astrocyte_surrogate.cpp
    )
-
-check_have_sfml_audio()
-if ( HAVE_SFML_AUDIO )
-  list( APPEND MODULE_SOURCES   
-        recording_backend_soundclick.h recording_backend_soundclick.cpp
-      )
-  set( USER_LINK_LIBRARIES sfml-audio )
-  add_definitions( -DHAVE_SFML_AUDIO )
-else ()
-  message( "-- Skip build of recording backend >SoundClick<. sfml-audio is not installed." )
-endif ()
 
 if ( BUILD_SHARED_LIBS )
   # When building shared libraries, also create a module for loading at runtime

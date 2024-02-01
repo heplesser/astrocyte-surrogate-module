@@ -1,5 +1,5 @@
 /*
- *  mymodule.h
+ *  astrocyte_surrogate_module.h
  *
  *  This file is part of NEST.
  *
@@ -20,22 +20,22 @@
  *
  */
 
-#ifndef MYMODULE_H
-#define MYMODULE_H
+#ifndef ASTROCYTE_SURROGATE_MODULE_H
+#define ASTROCYTE_SURROGATE_MODULE_H
 
 // Includes from sli:
 #include "slifunction.h"
 #include "slimodule.h"
 
 // Put your stuff into your own namespace.
-namespace mynest
+namespace astrocyte_surrogate
 {
 
 /**
  * Class defining your model.
  * @note For each model, you must define one such class, with a unique name.
  */
-class MyModule : public SLIModule
+class AstrocyteSurrogateModule : public SLIModule
 {
 public:
   // Interface functions ------------------------------------------
@@ -44,12 +44,12 @@ public:
    * @note The constructor registers the module with the dynamic loader.
    *       Initialization proper is performed by the init() method.
    */
-  MyModule();
+  AstrocyteSurrogateModule();
 
   /**
    * @note The destructor does not do much in modules.
    */
-  ~MyModule() override;
+  ~AstrocyteSurrogateModule() override;
 
   /**
    * Initialize module.
@@ -63,6 +63,6 @@ public:
   const std::string name() const override;
 
 };
-} // namespace mynest
+} // namespace astrocyte_surrogate
 
 #endif
