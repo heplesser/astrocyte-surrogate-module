@@ -92,7 +92,7 @@ astrocyte_surrogate::AstrocyteSurrogateModule::~AstrocyteSurrogateModule() = def
 const std::string
 astrocyte_surrogate::AstrocyteSurrogateModule::name() const
 {
-  return std::string( "Astrocyte_Surrogate_Module" ); // Return name of the module
+  return std::string( "astrocyte_surrogate_module" ); // Return name of the module
 }
 
 //-------------------------------------------------------------------------------------
