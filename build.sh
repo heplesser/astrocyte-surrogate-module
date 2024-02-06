@@ -62,14 +62,14 @@ cmake \
     -DCMAKE_INSTALL_PREFIX=$NEST_RESULT\
     ..
 
-make -j 
+make -j 2
 make install
 
 cd $SOURCEDIR
 mkdir build && cd build
 cmake -Dwith-nest=$NEST_RESULT/bin/nest-config ..
 
-VERBOSE=1 make -j
+VERBOSE=1 make -j 2
 make install
 
 . $NEST_RESULT/bin/nest_vars.sh
