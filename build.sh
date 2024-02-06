@@ -73,6 +73,6 @@ VERBOSE=1 make -j 2
 make install
 
 . $NEST_RESULT/bin/nest_vars.sh
-python -c 'import nest; nest.Install("astrocyte-surrogate-module"); nest.Create("astrocyte_surrogate")'
+python -c 'import nest; nest.Install("astrocyte_surrogate_module"); nest.Create("astrocyte_surrogate")'
 
 exit $?
