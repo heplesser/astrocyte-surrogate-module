@@ -79,9 +79,9 @@ SpikeEvent, DataLoggingRequest
 
 EndUserDocs */
 
-namespace astrocyte_surrogate
+namespace astrocyte_surrogate_module
 {
-
+  
 using namespace nest;
   
 void register_astrocyte_surrogate( const std::string& name );

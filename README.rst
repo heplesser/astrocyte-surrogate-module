@@ -5,14 +5,7 @@ This module provides the ``astrocyte_surrogate`` neuron model used as a benchmar
 
 .. attention::
 
-   This version of the extension module code will not work with NEST 3.6 or earlier.
-   It is adapted to NEST Master as of 15 December 2023.
-
-   To use this extension module with NEST with OpenMP threads, you
-   need a NEST version that has PR #3051 integrated, i.e.,
-   b8b2347f38947c042f88857c369c94c3bb6f6ee4 or later (5 Feb 2024).
-
-   
+   This version of the extension module code requires NEST 3.7 or later.
 
 
 Building the module

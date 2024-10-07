@@ -44,19 +44,9 @@
 #include "dictutils.h"
 
 
-nest::RecordablesMap< astrocyte_surrogate::AstrocyteSurrogate > astrocyte_surrogate::AstrocyteSurrogate::recordablesMap_;
+nest::RecordablesMap< astrocyte_surrogate_module::AstrocyteSurrogate > astrocyte_surrogate_module::AstrocyteSurrogate::recordablesMap_;
 
-namespace nest {
-// Override the create() method with one call to RecordablesMap::insert_()
-// for each quantity to be recorded.
-template <>
-void
-RecordablesMap< astrocyte_surrogate::AstrocyteSurrogate >::create()
-{
-}
-}
-
-namespace astrocyte_surrogate
+namespace astrocyte_surrogate_module
 {
   
 void
@@ -131,7 +121,6 @@ AstrocyteSurrogate::AstrocyteSurrogate()
   , S_()
   , B_( *this )
 {
-  recordablesMap_.create();
 }
 
 AstrocyteSurrogate::AstrocyteSurrogate( const AstrocyteSurrogate& n )
@@ -197,6 +186,6 @@ AstrocyteSurrogate::handle( DataLoggingRequest& e )
   B_.logger_.handle( e );
 }
 
-} // namespace astrocyte_surrogate
+} // namespace astrocyte_surrogate_module
 
 #endif // HAVE_GSL
